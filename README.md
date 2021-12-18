@@ -1,13 +1,6 @@
 # Outer Wilds planet creation template
  A template project for adding planets to Outer Wilds with New Horizons.
 
-<!-- TOC -->
-- [Prerequisites](#prerequisites)
-- [How to use this template](#how-to-use-this-template)
-- [Beyond config files](#beyond-config-files)
-
-<!-- /TOC -->
-
 ## Prerequisites
 - Outer Wilds Mod Manager (get it from the [Outer Wilds Mods](https://outerwildsmods.com/) website)
 - OWML installed in the Mod Manager
