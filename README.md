@@ -29,5 +29,6 @@
 - Replace `[your readable mod name]` with how you want your mod to appear in the database.
 - Replace `[your unique mod ID]` with whatever you want, as long as it isn't already in use by another mod. Adding `[your name]` as a prefix helps to prevent overlaps but isn't required.
 
-6. Releasing the mod. See the "Relasing the mod" section on the  [Outer Wilds Mod Template](https://github.com/Raicuparta/ow-mod-template) repo for info on how to do this. Be sure to try out the mod by adding it to your OWML mods folder and make sure it works in game before releasing.
+6. Edit the `README.md` file (you can do this on GitHub in your browser) and be sure to add some nice pictures of your planets.
+7. Releasing the mod. See the "Relasing the mod" section on the  [Outer Wilds Mod Template](https://github.com/Raicuparta/ow-mod-template) repo for info on how to do this. Be sure to try out the mod by adding it to your OWML mods folder and make sure it works in game before releasing.
 
