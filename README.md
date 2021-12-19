@@ -8,7 +8,7 @@
 
 ## How to use this template
 1. Follow the instructions in [Outer Wilds New Horizons](https://github.com/xen-42/outer-wilds-new-horizons) on how to create planet config files. You can test them by putting them in the `planets` folder wherever New Horizons is installed.
-2. Generate your repository from this template.
+2. Generate your repository from this template (click on Use This Template above).
 3. Clone your repository to your machine, ideally right into OWML's `Mods` folder. You can use GitHub desktop for this, then click the green "Code" dropdown and select open with GitHub Desktop.
 4. Add your config files into the `planets` folder. You can delete the `example_config` file in there while you're at it. When you're done you can commit the changes to your repo.
 5. Edit `NewHorizonsTemplate/manifest.json`. It will look like this:
