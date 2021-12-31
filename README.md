@@ -32,5 +32,5 @@ NOTE: When you make an update to the mod try not to change any file names. The M
 - Replace `[your unique mod ID]` with whatever you want, as long as it isn't already in use by another mod. Adding `[your name]` as a prefix helps to prevent overlaps but isn't required.
 
 6. Edit the `README.md` file (you can do this on GitHub in your browser) and be sure to add some nice pictures of your planets.
-7. Releasing the mod. See the "Relasing the mod" section on the  [Outer Wilds Mod Template](https://github.com/Raicuparta/ow-mod-template) repo for info on how to do this. Be sure to try out the mod by adding it to your OWML mods folder and make sure it works in game before releasing. When you zip your final mod be sure to exclude the README.md file and the config.json file (they aren't needed in the release).
+7. Releasing the mod. See the "Releasing the mod" section on the  [Outer Wilds Mod Template](https://github.com/Raicuparta/ow-mod-template) repo for info on how to do this. Be sure to try out the mod by adding it to your OWML mods folder and make sure it works in game before releasing. When you zip your final mod be sure to exclude the README.md file and the config.json file (they aren't needed in the release).
 
