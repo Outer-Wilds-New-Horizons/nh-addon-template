@@ -1,6 +1,8 @@
 # Outer Wilds planet creation template
  A template project for adding planets to Outer Wilds with New Horizons.
 
+NOTE: When you make an update to the mod try not to change any file names. The Mod Loader will not delete old files when updating and you can end up with duplicate planet configs. If you want to delete a file you can probably just erase its contents but leave it in the mod.
+
 ## Prerequisites
 - Outer Wilds Mod Manager (get it from the [Outer Wilds Mods](https://outerwildsmods.com/) website)
 - OWML installed in the Mod Manager
