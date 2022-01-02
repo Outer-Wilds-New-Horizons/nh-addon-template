@@ -9,10 +9,9 @@ NOTE: When you make an update to the mod try not to change any file names. The M
 - A GitHub account (required for forking the repo and for releasing your mod to the public)
 
 ## How to use this template
-1. Follow the instructions in [Outer Wilds New Horizons](https://github.com/xen-42/outer-wilds-new-horizons) on how to create planet config files. You can test them by putting them in the `planets` folder wherever New Horizons is installed.
-2. Generate your repository from this template (click on Use This Template above).
-3. Clone your repository to your machine, ideally right into OWML's `Mods` folder. You can use GitHub desktop for this, then click the green "Code" dropdown and select open with GitHub Desktop.
-4. Add your config files into the `planets` folder. You can delete the `example_config` file in there while you're at it. When you're done you can commit the changes to your repo.
+1. Generate your repository from this template (click on Use This Template above).
+2. Clone your repository to your machine into a new folder in OWML's `Mods` folder. Name this folder [your name].[your unique mod ID]. More on this later. You can use GitHub desktop for this, then click the green "Code" dropdown and select open with GitHub Desktop.
+3. Follow the instructions in [Outer Wilds New Horizons](https://github.com/xen-42/outer-wilds-new-horizons) on how to create planet config files. Place your config files into the `planets` folder in [your name].[your unique mod ID]. You can delete the `example_config` file in there while you're at it. When you're done you can commit the changes to your repo.
 5. Edit `NewHorizonsTemplate/manifest.json`. It will look like this:
 
 ```
@@ -32,5 +31,5 @@ NOTE: When you make an update to the mod try not to change any file names. The M
 - Replace `[your unique mod ID]` with whatever you want, as long as it isn't already in use by another mod. Adding `[your name]` as a prefix helps to prevent overlaps but isn't required.
 
 6. Edit the `README.md` file (you can do this on GitHub in your browser) and be sure to add some nice pictures of your planets.
-7. Releasing the mod. See the "Releasing the mod" section on the  [Outer Wilds Mod Template](https://github.com/Raicuparta/ow-mod-template) repo for info on how to do this. Be sure to try out the mod by adding it to your OWML mods folder and make sure it works in game before releasing. When you zip your final mod be sure to exclude the README.md file and the config.json file (they aren't needed in the release).
+7. Releasing the mod. See the "Releasing the mod" section on the  [Outer Wilds Mod Template](https://github.com/Raicuparta/ow-mod-template) repo for info on how to do this. Be sure to try out the mod by adding it to your OWML mods folder and make sure it works in game before releasing. When you zip your final mod be sure to exclude the README.md file and the config.json file (they aren't needed in the release). The zip file should contain: `planets`, `config`, `manifest`, and `NewHorizonsConfig.dll`.
 
