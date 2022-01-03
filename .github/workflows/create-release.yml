@@ -14,6 +14,11 @@ jobs:
 
       - run: git archive --format zip --output ${{ github.event.repository.name }}.zip HEAD
 
+      - name: Get local manifest file
+        id: read-manifest
+        run: echo "::set-output name=mods::$(< ./manifest.json sed ':a;N;$!ba;s/\n/ /g')"
+
       - uses: softprops/action-gh-release@v1
         with:
-          files: ${{ github.event.repository.name }}.zip
+          files: "${{ github.event.repository.name }}.zip"
+          tag: v"${{fromJson(steps.read-manifest.outputs.manifest).version}}"
