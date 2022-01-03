@@ -1,0 +1,18 @@
+name: Create Release
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: git archive --format zip --output ${{ github.event.repository.name }}.zip HEAD
+
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ github.event.repository.name }}.zip
