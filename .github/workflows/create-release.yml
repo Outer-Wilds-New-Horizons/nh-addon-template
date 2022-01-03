@@ -21,4 +21,4 @@ jobs:
       - uses: softprops/action-gh-release@v1
         with:
           files: "${{ github.event.repository.name }}.zip"
-          tag: v"${{fromJson(steps.read-manifest.outputs.manifest).version}}"
+          tag: "v${{fromJson(steps.read-manifest.outputs.manifest).version}}"
