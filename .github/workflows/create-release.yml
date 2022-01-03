@@ -16,7 +16,7 @@ jobs:
 
       - name: Get local manifest file
         id: read-manifest
-        run: echo "::set-output name=manfiest::$(< ./manifest.json sed ':a;N;$!ba;s/\n/ /g')"
+        run: echo "::set-output name=manifest::$(< ./manifest.json sed ':a;N;$!ba;s/\n/ /g')"
 
       - uses: softprops/action-gh-release@v1
         with:
