@@ -7,18 +7,20 @@ on:
 
 jobs:
   release:
-#     if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repo files
+        uses: actions/checkout@v2
 
-      - run: git archive --format zip --output ${{ github.event.repository.name }}.zip HEAD
+      - name: Create zip with repo files
+        run: git archive --format zip --output ${{ github.event.repository.name }}.zip HEAD
 
-      - name: Get local manifest file
+      - name: Read checked out manifest.json
         id: read-manifest
         run: echo "::set-output name=manifest::$(< ./manifest.json sed ':a;N;$!ba;s/\n/ /g')"
 
-      - uses: softprops/action-gh-release@v1
+      - name: Publish repo zip with version from manifest
+        uses: softprops/action-gh-release@v1
         with:
           files: "${{ github.event.repository.name }}.zip"
           tag_name: "v${{fromJson(steps.read-manifest.outputs.manifest).version}}"
