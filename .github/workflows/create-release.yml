@@ -1,0 +1,26 @@
+name: Create Release
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo files
+        uses: actions/checkout@v2
+
+      - name: Create zip with repo files
+        run: git archive --format zip --output ${{ github.event.repository.name }}.zip HEAD
+
+      - name: Read checked out manifest.json
+        id: read-manifest
+        run: echo "::set-output name=manifest::$(< ./manifest.json sed ':a;N;$!ba;s/\n/ /g')"
+
+      - name: Publish repo zip with version from manifest
+        uses: softprops/action-gh-release@v1
+        with:
+          files: "${{ github.event.repository.name }}.zip"
+          tag_name: "v${{fromJson(steps.read-manifest.outputs.manifest).version}}"
