@@ -19,8 +19,16 @@ jobs:
         id: read-manifest
         run: echo "::set-output name=manifest::$(< ./manifest.json sed ':a;N;$!ba;s/\n/ /g')"
 
+      - name: Check if version in manifest.json is already released
+        uses: mukunku/tag-exists-action@v1.0.0
+        id: checkTag
+        with:
+          tag: "v${{fromJson(steps.read-manifest.outputs.manifest).version}}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
       - name: Publish repo zip with version from manifest
-        if: ${{fromJson(steps.read-manifest.outputs.manifest).version != '0.0.0' }}
+        if: ${{ (fromJson(steps.read-manifest.outputs.manifest).version != '0.0.0') && (steps.checkTag.outputs.exists == 'false') }}
         uses: softprops/action-gh-release@v1
         with:
           files: "${{ github.event.repository.name }}.zip"
