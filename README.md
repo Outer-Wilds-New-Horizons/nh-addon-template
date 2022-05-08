@@ -1,8 +1,6 @@
 # Outer Wilds planet creation template
  A template project for adding planets to Outer Wilds with New Horizons.
 
-If you aren't comfortable using GitHub, there is a world creation page on the [Outer Wilds Mods website](https://outerwildsmods.com/custom-worlds) that automates most of the process. You can use that instead of directly using this template.
-
 The source code for the dll used is [here](https://github.com/xen-42/ow-new-horizons-mod-template).
 
 ## Prerequisites
