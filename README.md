@@ -1,5 +1,5 @@
 # Outer Wilds planet creation template
- A template project for adding planets to Outer Wilds with New Horizons.
+ A template project for adding planets to Outer Wilds with [New Horizons](https://github.com/xen-42/outer-wilds-new-horizons).
 
 The source code for the dll used is [here](https://github.com/xen-42/ow-new-horizons-mod-template).
 
@@ -11,7 +11,7 @@ The source code for the dll used is [here](https://github.com/xen-42/ow-new-hori
 ## How to use this template
 1. Generate your repository from this template (click on Use This Template above).
 2. Clone your repository to your machine into a new folder in OWML's `Mods` folder. Name this folder [your name].[your unique mod ID]. More on this later. You can use GitHub desktop for this, then click the green "Code" dropdown and select open with GitHub Desktop.
-3. Follow the instructions in [Outer Wilds New Horizons](https://github.com/xen-42/outer-wilds-new-horizons) on how to create planet config files. Place your config files into the `planets` folder in [your name].[your unique mod ID]. You can delete the `example_config` file in there while you're at it. When you're done you can commit the changes to your repo.
+3. Follow the instructions in [Outer Wilds New Horizons](https://nh.outerwildsmods.com/) on how to create planet config files. Place your config files into the `planets` folder in [your name].[your unique mod ID]. You can delete the `example_config` file in there while you're at it. When you're done you can commit the changes to your repo.
 5. Edit `NewHorizonsTemplate/manifest.json`. It will look like this:
 
 ```
