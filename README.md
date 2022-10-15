@@ -21,7 +21,7 @@ The source code for the dll used is [here](https://github.com/xen-42/ow-new-hori
   "name": "[your readable mod name]",
   "uniqueName": "[your name].[your unique mod ID]",
   "version": "0.1.0",
-  "owmlVersion": "2.1.0",
+  "owmlVersion": "2.7.2",
   "dependencies": [ "xen.NewHorizons" ]
 }
 ```
