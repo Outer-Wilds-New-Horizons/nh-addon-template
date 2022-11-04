@@ -17,20 +17,23 @@ jobs:
 
       - name: Read checked out manifest.json
         id: read-manifest
-        run: echo "::set-output name=manifest::$(< ./manifest.json sed ':a;N;$!ba;s/\n/ /g')"
+        run: echo "manifest=$(< ./manifest.json sed ':a;N;$!ba;s/\n/ /g')" >> $GITHUB_OUTPUT
 
-      - name: Check if version in manifest.json is already released
-        uses: mukunku/tag-exists-action@v1.0.0
+      - name: Check For Release
         id: checkTag
-        with:
-          tag: "v${{fromJson(steps.read-manifest.outputs.manifest).version}}"
+        run: echo "exists=$(git ls-remote --exit-code --tags origin ${{ env.TAG }} >/dev/null 2>&1 && echo true || echo false)" >> $GITHUB_OUTPUT
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: "v${{fromJson(steps.read-manifest.outputs.manifest).version}}"
     
-      - name: Publish repo zip with version from manifest
+      - name: Create Release
+        uses: "ncipollo/release-action@v1"
         if: ${{ (fromJson(steps.read-manifest.outputs.manifest).version != '0.0.0') && (steps.checkTag.outputs.exists == 'false') }}
-        uses: softprops/action-gh-release@v1
         with:
-          files: "${{ github.event.repository.name }}.zip"
-          body: "${{ github.event.head_commit.message }}"
-          tag_name: "v${{fromJson(steps.read-manifest.outputs.manifest).version}}"
+            allowUpdates: true
+            commit: ${{ github.ref_name }}
+            tag: "v${{fromJson(steps.read-manifest.outputs.manifest).version}}"
+            name: Version ${{fromJson(steps.read-manifest.outputs.manifest).version}}
+            omitBodyDuringUpdate: true
+            artifacts: "${{ github.event.repository.name }}.zip"
+            draft: true
+            prerelease: false
