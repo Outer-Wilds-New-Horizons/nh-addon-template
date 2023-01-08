@@ -1,0 +1,62 @@
+{
+	"$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/body_schema.json",
+	"name" : "Example Planet",
+	"Base": {
+		"groundSize": 100,
+		"surfaceSize": 100,
+		"surfaceGravity": 10,
+		"hasMapMarker": true,
+		"ambientLight": 0.8
+	},
+	"Orbit": {
+		"primaryBody": "Sun",
+		"semiMajorAxis": 7000
+	},
+	"Props": {
+		"details": [
+			{
+				"path": "Anglerfish_Body/Beast_Anglerfish",
+				"position": 
+				{
+					"x": 0,
+					"y": 101,
+					"z": 0
+				},
+				"alignToNormal": true,
+				"scale" : 0.02,
+				"removeChildren" :[
+					"B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end"
+				],
+				"rename": "Talking_Fish"
+			}
+		],
+		"signals": [
+			{
+				"audio": "OW_NM_WhiteHoleAmbienceL",
+				"parentPath": "Sector/Talking_Fish",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 0.5,
+					"z": 0
+				},
+				"name": "Talking Fish",
+				"frequency": "Traveler"
+			}
+		],
+		"dialogue": [
+			{
+				"xmlFile": "planets/example_dialogue.xml",
+				"parentPath": "Sector/Talking_Fish",
+				"pathToAnimController": "Sector/Talking_Fish",
+				"isRelativeToParent": true,
+				"position": {
+					"x": 0,
+					"y": 0.5,
+					"z": 0
+				},
+				"radius": 2
+			}
+		]
+	}
+}
