@@ -1,9 +1,10 @@
 {
-  "filename": "NewHorizonsConfig.dll",
-  "author": "[your name]",
-  "name": "[your readable mod name]",
-  "uniqueName": "[your name].[your unique mod ID]",
-  "version": "0.0.0",
-  "owmlVersion": "2.7.2",
-  "dependencies": [ "xen.NewHorizons" ]
+	"$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/manifest_schema.json",
+	"filename": "NewHorizonsConfig.dll",
+	"author": "[your name]",
+	"name": "[your readable mod name]",
+	"uniqueName": "[your name].[your unique mod ID]",
+	"version": "0.0.0",
+	"owmlVersion": "2.13.0",
+	"dependencies": [ "xen.NewHorizons" ]
 }
