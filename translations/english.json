@@ -1,0 +1,15 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/translation_schema.json",
+	"DialogueDictionary": {
+		
+	},
+	"ShipLogDictionary": {
+		
+	},
+	"UIDictionary": {
+		
+	},
+	"OtherDictionary": {
+		
+	}
+}
