@@ -9,7 +9,10 @@ The source code for the dll used is [here](https://github.com/xen-42/ow-new-hori
 - A GitHub account (required for forking the repo and for releasing your mod to the public)
 
 ## How to use this template
-1. Generate your repository from this template (click on Use This Template above). **DO NOT FORK THIS REPOSITORY!**
+
+### **DO NOT FORK THIS REPOSITORY!**
+
+1. Generate your repository from this template (click on Use This Template above). 
 
 2. Clone your repository to your machine into a new folder in OWML's `Mods` folder. Name this folder [your name].[your unique mod ID]. More on this later. You can use GitHub desktop for this, then click the green "Code" dropdown and select open with GitHub Desktop.
 
