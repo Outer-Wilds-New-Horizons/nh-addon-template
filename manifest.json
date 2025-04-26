@@ -5,6 +5,6 @@
 	"name": "[your readable mod name]",
 	"uniqueName": "[your name].[your unique mod ID]",
 	"version": "0.0.0",
-	"owmlVersion": "2.13.0",
+	"owmlVersion": "2.15.1",
 	"dependencies": [ "xen.NewHorizons" ]
 }

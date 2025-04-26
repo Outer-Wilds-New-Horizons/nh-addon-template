@@ -4,10 +4,16 @@
 	"Base": {
 		"groundSize": 100,
 		"surfaceSize": 100,
-		"surfaceGravity": 10,
-		"hasMapMarker": true,
-		"ambientLight": 0.8
+		"surfaceGravity": 10
 	},
+	"MapMarker": {
+		"enabled": true
+	},
+	"AmbientLights": [
+		{
+			"intensity": 0.8
+		}
+	],
 	"Orbit": {
 		"primaryBody": "Sun",
 		"semiMajorAxis": 7000
@@ -22,7 +28,7 @@
 					"y": 101,
 					"z": 0
 				},
-				"alignToNormal": true,
+				"alignRadial": true,
 				"scale" : 0.02,
 				"removeChildren" :[
 					"B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end"
